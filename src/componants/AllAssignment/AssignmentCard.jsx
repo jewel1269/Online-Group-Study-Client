@@ -1,11 +1,35 @@
+import { useContext, useState } from "react";
 import { GoPencil } from "react-icons/go";
 import { RiDeleteBinFill } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
+import axios from "axios";
 
 
 const AssignmentCard = ({item}) => {
-    const { title, photoURL, marks, descriptions, date, difficultyLevel, name, _id } =
+    const { title, photoURL, marks, email, descriptions, date, difficultyLevel, name, _id } =
     item;
+
+    const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const { user } = useContext(AuthContext);
+const handleDelete = ()=>{
+
+    const url = `http://localhost:5000/assignments/${user?.email}`
+
+axios
+.delete(url)
+  .then((response) => {
+    setItems(response.data);
+    setLoading(false);
+  })
+  .then((error) => {
+    console.log(error);
+    setLoading(false);
+  });
+console.log(items);
+}
+
     return (
         <div>
             <div className="flex max-w-md border border-green-200 overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
@@ -42,8 +66,8 @@ const AssignmentCard = ({item}) => {
         </div>
 
         <div className="flex justify-between mt-3 item-center">
-            <NavLink><button className="btn btn-sm rounded-full btn-success text-lg lg:tooltip font-bold text-gray-700 dark:text-gray-200 md:text-xl " data-tip="Update"><GoPencil /></button></NavLink>
-           <NavLink> <button className="btn btn-sm rounded-full btn-error text-lg lg:tooltip  font-bold text-gray-700 dark:text-gray-200 md:text-xl" data-tip="Delete"><RiDeleteBinFill /></button></NavLink>
+            <NavLink><button className="btn btn-sm rounded-full  text-lg lg:tooltip font-bold text-gray-700 dark:text-gray-200 md:text-xl " data-tip="Update"><GoPencil /></button></NavLink>
+           <NavLink> <button onClick={()=>handleDelete(email)} className="btn btn-sm rounded-full  text-lg lg:tooltip  font-bold text-gray-700 dark:text-gray-200 md:text-xl" data-tip="Delete"><RiDeleteBinFill /></button></NavLink>
             <NavLink to={`/details/${_id}`}><button className="btn btn-sm px-2 py-1 text-xs lg:tooltip  font-bold text-white uppercase transition-colors duration-300 transform bg-gray-800 rounded dark:bg-gray-700 hover:bg-gray-700 dark:hover:bg-gray-600 focus:outline-none focus:bg-gray-700 dark:focus:bg-gray-600" data-tip="Details">View Details</button></NavLink>
         </div>
     </div>

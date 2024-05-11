@@ -1,7 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
 
 const PendingCard = ({ item }) => {
-  const { title, photoURL, marks, descriptions, date, difficultyLevel, name } =
+  
+  const { title, photoURL, marks, descriptions, date, difficultyLevel, name, feedback } =
     item;
   return (
     <div>
@@ -56,6 +57,7 @@ const PendingCard = ({ item }) => {
                     <a className="underline" href="https://www.rocketlawyer.com/">https://www.rocketlawyer.com/</a>
                 
                 </p>
+                <p><strong>Notes:</strong> {feedback}</p>
 
                 <form className="mt-4" action="#">
                   <label

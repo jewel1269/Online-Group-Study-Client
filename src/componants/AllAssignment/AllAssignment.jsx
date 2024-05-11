@@ -1,11 +1,13 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import AssignmentCard from "./AssignmentCard";
 import { IoIosArrowDown } from "react-icons/io";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const AllAssignment = () => {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { user } = useContext(AuthContext);
 
   axios
     .get("http://localhost:5000/assignments")
@@ -21,6 +23,8 @@ const AllAssignment = () => {
   if (loading) {
     return <span className="loading loading-ring lg:ml-[50%] lg:mt-[20%] bg-red-600 loading-lg"></span>;
 }
+
+
 
   return (
     <div>
