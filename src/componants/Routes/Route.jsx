@@ -5,6 +5,9 @@ import Login from "../UserIndenty/Login";
 import Register from "../UserIndenty/Register";
 import CreateA from "../Create-Assignment/CreateA";
 import PendingAssignment from "../PendingAssignment/PendingAssignment";
+import AllAssignment from "../AllAssignment/AllAssignment";
+import Details from "../AllAssignment/Details";
+import MyAssignment from "../MyAssignment/MyAssignment";
 
 export const router = createBrowserRouter([
     {
@@ -31,6 +34,19 @@ export const router = createBrowserRouter([
       {
         path: "/PendingAssignment",
         element: <PendingAssignment/>
+      },
+      {
+        path: "AllAssignment",
+        element:<AllAssignment/>
+      },
+      {
+        path: "details/:id",
+        element:<Details/>
+      },
+      {
+        path: "/MyAssignment",
+        element: <MyAssignment/>
+
       }
       ],
     },

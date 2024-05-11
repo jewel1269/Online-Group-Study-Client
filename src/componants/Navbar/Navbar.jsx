@@ -18,12 +18,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-100 shadow dark:bg-gray-800">
-      <div className="lg:ml-20 py-1 mx-auto">
+    <nav className="bg-gray-100 shadow-md dark:bg-gray-800">
+      <div className="lg:ml-16 lg:mr-6 py-1 mx-auto">
         <div className="lg:flex lg:items-center">
           <div className="flex items-center justify-between">
           <div className='flex items-center mr-10'>
-             <NavLink to={"/"}><img className="lg:w-20 h-12 w-12 lg:h-16" src={logo} alt="" /></NavLink>
+            <img className="lg:w-20 h-12 w-12 lg:h-16" src={logo} alt="" />
             
             <h2 className='lg:text-2xl font-bold'>QEDUCATO</h2>
              </div>
@@ -45,15 +45,15 @@ const Navbar = () => {
           </div>
 
           <div className={`lg:flex lg:gap-[450px]  lg:items-center ${isOpen ? 'block' : 'hidden'}`}>
-            <div  className="flex flex-col text-gray-600 capitalize dark:text-gray-300 lg:flex  lg:px-16 gap-2 lg:-mx-4 lg:flex-row lg:items-center">
-                {/* <Link  className="mt-2 transition-colors duration-300  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200">Home</Link> */}
-              <div id='sidebar'>
-              <Link  className="mt-2 transition-colors duration-300  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Assignments</strong></Link>
+            <div  className="flex flex-col text-gray-600 capitalize dark:text-gray-300 lg:flex  lg:px-16 gap-2 lg:-mx-8 lg:flex-row lg:items-center">
+               
+              
+                 <Link to={"/"}  className="mt-2 transition-colors duration-300  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Home</strong></Link>
+              <Link to={"/AllAssignment"} className="mt-2 transition-colors duration-300  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Assignments</strong></Link>
               <Link to={"/createA"} className="mt-2 transition-colors duration-300  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Create..Assignment</strong></Link>
               <Link to={"/PendingAssignment"} className="mt-2 transition-colors duration-300  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"> <strong>Pending..Assignments</strong></Link>
               <Link to={"/register"}  className="mt-2 transition-colors duration-300  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Register</strong></Link>
-              </div>
-              
+             
 
               <div className="relative mt-4 lg:mt-0 lg:mx-4">
                 <span className="absolute inset-y-0 left-0 flex items-center pl-3">
@@ -79,7 +79,7 @@ const Navbar = () => {
        
       </div>
       <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-        <button className='btn btn-xs font-semibold text-md lg:w-36 btn-outline btn-success'> <NavLink>1. my attempted</NavLink></button>
+        <button className='btn btn-xs font-semibold text-md lg:w-36 btn-outline btn-success'> <NavLink to={"/MyAssignment"}>1. my attempted</NavLink></button>
         <button  onClick={handleSignOut} className='btn btn-xs font-semibold text-md lg:w-36  btn-outline mt-2 btn-error'><NavLink>2. Logout</NavLink></button>
       </ul>
     </div>
