@@ -32,7 +32,8 @@ const Faq = () => {
                         <span className="border border-blue-500"></span>
 
                         <p className="max-w-3xl px-4 text-gray-500 dark:text-gray-300">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, eum quae. Harum officiis reprehenderit ex quia ducimus minima id provident molestias optio nam vel, quidem iure voluptatem, repellat et ipsa.
+                        To schedule an appointment for your app, navigate to the scheduling section. Choose your desired date and time, then fill out the required information. Confirm your appointment to complete the process.
+
                         </p>
                     </div>
                 </div>

@@ -13,7 +13,7 @@ const Futures = () => {
 
         <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-4">
             <div className="flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
-                <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt=""></img>
+                <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://www.exciteon.com/wp-content/uploads/2023/06/trichy-creative-logo-designer-scaled.jpg" alt=""></img>
 
                 <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">Professional Course</h1>
 
@@ -50,11 +50,11 @@ const Futures = () => {
             </div>
 
             <div className="flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
-                <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" alt=""></img>
+                <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://education.stthomas.edu/_media-library/_images/degrees-and-licensures/graduate-studies-k-12-education-2.1/ma-in-educational-studies-for-experienced-teachers/ma-in-educational-studies-for-experienced/speaker-presenting-crowd.jpg" alt=""></img>
 
                 <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">Experienced Instructors</h1>
 
-                <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Lead Developer</p>
+                <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">We have 200+ Instructors</p>
 
                 <div className="flex mt-3 -mx-2">
                     <a href="#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">
@@ -87,11 +87,11 @@ const Futures = () => {
             </div>
 
             <div className="flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
-                <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt=""></img>
+                <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://www.shutterstock.com/image-illustration/practical-training-gear-sign-concept-260nw-327573113.jpg" alt=""></img>
 
                 <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">Practical Traning</h1>
 
-                <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Lead designer</p>
+                <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">We provide best practical Training</p>
 
                 <div className="flex mt-3 -mx-2">
                     <a href="#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">
@@ -123,11 +123,11 @@ const Futures = () => {
                 </div>
             </div>
             <div className="flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
-                <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt=""></img>
+                <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://static.vecteezy.com/system/resources/previews/017/489/601/original/check-mark-approved-or-certification-badge-logo-design-certified-medal-icon-check-mark-template-flat-design-check-mark-badge-sign-free-vector.jpg" alt=""></img>
 
                 <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">Validated Certificated</h1>
 
-                <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Lead designer</p>
+                <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">100% Authentic Certificated</p>
 
                 <div className="flex mt-3 -mx-2">
                     <a href="#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">
@@ -159,11 +159,11 @@ const Futures = () => {
                 </div>
             </div>
             <div className="flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
-                <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt=""></img>
+                <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://miro.medium.com/v2/resize:fit:1400/1*RU4maqP2qMqMP5OI2bYEbw.jpeg" alt=""></img>
 
                 <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">Showing Your Creativity</h1>
 
-                <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Lead designer</p>
+                <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Friendly Environment Site</p>
 
                 <div className="flex mt-3 -mx-2">
                     <a href="#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">
@@ -196,11 +196,11 @@ const Futures = () => {
             </div>
 
             <div className="flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
-                <img  className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt=""></img>
+                <img  className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://cdn.vectorstock.com/i/500p/36/93/support-line-icon-outline-vector-30913693.jpg" alt=""></img>
 
                 <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">24/7 Support</h1>
 
-                <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Full stack developer</p>
+                <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Crazy level support</p>
 
                 <div className="flex mt-3 -mx-2">
                     <a href="#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">

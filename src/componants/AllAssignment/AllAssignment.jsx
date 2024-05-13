@@ -62,14 +62,14 @@ const AllAssignment = () => {
           </div>
         </section>
       </div>
-      <div className="lg:grid lg:grid-cols-4 gap-5 mt-10 lg:ml-12 lg:me-10">
+      <div className="lg:grid md:grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-10 lg:ml-12 lg:me-10">
         {items.map((item) => (
           <AssignmentCard key={item._id} item={item}></AssignmentCard>
         ))}
       </div>
       <div>
       
-    <div className="flex lg:ml-[37%] mt-10">
+    <div className="flex md:ml-[23%] lg:ml-[37%] mt-10">
       <a href="#" className="px-4 py-2 mx-1 text-gray-500 capitalize bg-white rounded-md cursor-not-allowed dark:bg-gray-800 dark:text-gray-600">
         <div className="flex items-center -mx-1">
           <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 mx-1 rtl:-scale-x-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">

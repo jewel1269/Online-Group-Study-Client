@@ -54,13 +54,13 @@ const handleSubmitBtn = (e) => {
 
 
     return (
-        <section className="max-w-4xl lg:mt-40 shadow-xl p-6 mx-auto bg-white rounded-md border border-gray-300 dark:bg-gray-800">
-        <h2 className="text-lg font-semibold text-gray-700 capitalize dark:text-white"><strong>Give Mark:</strong></h2>
+        <section className="lg:max-w-4xl mt-3 lg:mt-40 shadow-xl p-6 mx-auto bg-white rounded-md border border-gray-300 dark:bg-gray-800">
+        <h2 className="text-lg font-semibold text-gray-700  dark:text-white"><strong>Give Mark:</strong></h2>
         <h1><strong>Pdf/Doc:</strong><a href={item?.pdf}> {item?.pdf}</a></h1>
             <h1><strong>Note:</strong> {item?.feedback}</h1>
         <form onSubmit={handleSubmitBtn}>
             
-            <div className=" gap-6 mt-4 sm:grid-cols-2">
+            <div className=" lg:gap-6 mt-4 sm:grid-cols-2">
                 <div>
                     <label className="text-gray-700 dark:text-gray-200" htmlFor="username">Obtained Marks:</label>
                     <input defaultValue={item?.marks} id="obtained" name="obtained" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />

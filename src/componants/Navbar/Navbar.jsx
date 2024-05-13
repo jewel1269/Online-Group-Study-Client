@@ -89,8 +89,8 @@ const Navbar = () => {
        
       </div>
       <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-        <button className='btn btn-xs font-semibold text-md lg:w-36 btn-outline btn-success'> <NavLink to={"/MyAssignment"}>1. my attempted</NavLink></button>
-        <button  onClick={handleSignOut} className='btn btn-xs font-semibold text-md lg:w-36  btn-outline mt-2 btn-error'><NavLink>2. Logout</NavLink></button>
+        <button className='btn btn-xs font-semibold text-md lg:w-36 btn-outline btn-success'> <NavLink to={"/MyAssignment"}>my attempted</NavLink></button>
+        <button  onClick={handleSignOut} className='btn btn-xs font-semibold text-md lg:w-36  btn-outline mt-2 btn-error'><NavLink>Logout</NavLink></button>
       </ul>
     </div>
     <NavLink to={"/logIn"}><button className="btn  btn-warning btn-sm lg:w-24 mt-2 btn-outline w-16">Login</button></NavLink>

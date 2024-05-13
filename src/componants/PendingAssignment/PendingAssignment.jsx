@@ -85,7 +85,7 @@ const PendingAssignment = () => {
 
             </div>
 
-            <div className="lg:grid lg:grid-cols-5 gap-5 lg:ml-28 mt-10">
+            <div className="lg:grid md:grid md:grid-cols-2 lg:grid-cols-5 gap-5 lg:ml-28 mt-10">
                 {
                     items.map(item=> <PendingCard key={item._id} item={item}></PendingCard> )
                 }

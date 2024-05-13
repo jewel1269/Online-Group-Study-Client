@@ -2,7 +2,7 @@ import logo from "../../../assets//cap-removebg-preview.png";
 const Footer = () => {
   return (
     <div>
-      <footer className="bg-white shadow-md w-full border border-gray-200 dark:bg-gray-900">
+      <footer className="bg-white shadow-md w-full border lg:mt-5 border-gray-200 dark:bg-gray-900">
         <div className=" lg:ml-10 lg:mr-10 px-6 py-10 mx-auto">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
             <div className="sm:col-span-2">
