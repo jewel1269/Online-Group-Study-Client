@@ -9,7 +9,8 @@ const AllAssignment = () => {
   const [loading, setLoading] = useState(true);
   const { user } = useContext(AuthContext);
 
-  axios
+  useEffect(()=>{
+    axios
     .get("http://localhost:5000/assignments")
     .then((response) => {
       setItems(response.data);
@@ -19,7 +20,7 @@ const AllAssignment = () => {
       console.log(error);
       setLoading(false);
     });
-  // console.log(items);
+  },[])
   if (loading) {
     return <span className="loading loading-ring lg:ml-[50%] lg:mt-[20%] bg-red-600 loading-lg"></span>;
 }
@@ -32,15 +33,14 @@ const AllAssignment = () => {
         <section className="bg-white dark:bg-gray-900">
           <div className="container flex flex-col items-center px-4 py-12 mx-auto text-center">
             <h2 className="max-w-2xl mx-auto text-2xl font-semibold tracking-tight text-gray-800 xl:text-3xl dark:text-white">
-              Bring your Business to the{" "}
+              Bring your Career to the{" "}
               <span className="text-blue-500">next level.</span>
             </h2>
 
             <p className="max-w-4xl mt-6 text-center text-gray-500 dark:text-gray-300">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum
-              quidem officiis reprehenderit, aperiam veritatis non, quod veniam
-              fuga possimus hic explicabo laboriosam nam. A tempore totam ipsa
-              nemo adipisci iusto!
+              
+"Elevate your professional trajectory with tailored strategies and advanced resources.
+ Propel your career to new heights and unlock unparalleled opportunities for growth and success."
             </p>
 
             <div className="relative">

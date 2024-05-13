@@ -17,6 +17,7 @@ const AssignmentCard = ({item}) => {
   const {id} = useParams()
 
 
+
   const handleDelete = () => {
     Swal.fire({
       title: "Are you sure?",
@@ -46,6 +47,7 @@ const AssignmentCard = ({item}) => {
       }
     });
   };
+
 
 
 

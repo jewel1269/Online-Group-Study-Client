@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PendingCard from "./PendingCard";
 import Exmeener from "./Exmeener";
 
@@ -7,14 +7,16 @@ import Exmeener from "./Exmeener";
 const PendingAssignment = () => {
     const [items, setItems]= useState([])
     
-    axios.get("http://localhost:5000/submittedAssignment")
+    useEffect(()=>{
+        axios.get("http://localhost:5000/submittedAssignment")
     .then(response => {
         setItems(response.data);
     })
     .then(error =>{
-        // console.log(error);
+        console.log(error);
     })
   
+    },[])
 
 
     return (

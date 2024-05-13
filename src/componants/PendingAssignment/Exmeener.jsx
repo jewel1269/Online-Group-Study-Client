@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -9,13 +9,15 @@ const Exmeener = () => {
     const {id}= useParams()
     
     
+   useEffect(()=>{
     axios.get("http://localhost:5000/submittedAssignment")
     .then(response => {
         setItems(response.data);
     })
     .then(error =>{
-        // console.log(error);
+        console.log(error);
     })
+   },[])
 
 const item = items.find(item=>item._id ===id)
 

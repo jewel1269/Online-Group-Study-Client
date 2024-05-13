@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import Card from "./Card";
 
@@ -12,16 +12,18 @@ const MyAssignment = () => {
 
     const url = `http://localhost:5000/submittedAssignment/${user?.email}`
   
+   useEffect(()=>{
     axios.get(url)
-      .then((response) => {
-        setItems(response.data);
-        setLoading(false);
-      })
-      .then((error) => {
-        console.log(error);
-        setLoading(false);
-      });
-    console.log(items);
+    .then((response) => {
+      setItems(response.data);
+      setLoading(false);
+    })
+    .then((error) => {
+      console.log(error);
+      setLoading(false);
+    });
+  console.log(items);
+   },[url, items])
 
     if (loading) {
       return <span className="loading loading-ring lg:ml-[50%] lg:mt-[20%] bg-red-600 loading-lg"></span>;
