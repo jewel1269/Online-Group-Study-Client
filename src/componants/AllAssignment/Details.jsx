@@ -39,6 +39,7 @@ const Details = () => {
     e.preventDefault();
     const form = e.target;
     const feedback =form.feedback.value;
+    const pdf =form.pdf.value;
     const title = item.title;
     const email = user?.email;
     const name = user?.displayName;
@@ -51,6 +52,7 @@ const Details = () => {
       title,
       email,
       name,
+      pdf,
       photoURL,
       marks,
       difficultyLevel,
@@ -139,19 +141,21 @@ const Details = () => {
                       <div className="relative inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
                         <div className="px-4 pt-5 pb-4 bg-white sm:p-6 sm:pb-4">
                           <h3 className="text-lg font-medium leading-6 text-gray-900">
-                            Invite your team
+                            Submit Your Assignment: 
                           </h3>
-                          <p className="mt-2 text-sm text-gray-500">
-                            <span className="font-medium">Pdf/Doc: </span>
-                            <a
-                              href="https://www.rocketlawyer.com/"
-                              className="underline"
-                            >
-                              https://www.rocketlawyer.com/
-                            </a>
-                          </p>
+                          
 
                           <form onSubmit={handleSubmitBtn} className="mt-4">
+                          <label className="block mt-3" htmlFor="Pdf/Link">
+                              <input
+                                type="text"
+                                name="pdf"
+                                id="pdf"
+                                placeholder="Link/Pdf........"
+                                className="block w-full px-4 py-3 text-sm text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300"
+                              required
+                              />
+                            </label>
                             <label className="block mt-3" htmlFor="feedback">
                               <textarea
                                 type="text"

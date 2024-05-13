@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import PendingCard from "./PendingCard";
+import Exmeener from "./Exmeener";
 
 
 const PendingAssignment = () => {
@@ -11,9 +12,9 @@ const PendingAssignment = () => {
         setItems(response.data);
     })
     .then(error =>{
-        console.log(error);
+        // console.log(error);
     })
-    console.log(items);
+  
 
 
     return (
@@ -23,7 +24,7 @@ const PendingAssignment = () => {
     <div className="flex items-center gap-x-3">
         <h2 className="text-lg font-medium text-gray-800 dark:text-white">Team members</h2>
 
-        <span className="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full dark:bg-gray-800 dark:text-blue-400">100 users</span>
+        <span className="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full dark:bg-gray-800 dark:text-blue-400">{items.length}</span>
     </div>
 
     <div className="flex flex-col mt-6">
@@ -84,9 +85,8 @@ const PendingAssignment = () => {
 
             <div className="lg:grid lg:grid-cols-5 gap-5 lg:ml-28 mt-10">
                 {
-                    items.map(item=> <PendingCard key={item._id} item={item}></PendingCard>)
+                    items.map(item=> <PendingCard key={item._id} item={item}></PendingCard> )
                 }
-
             </div>
         </div>
     );

@@ -1,34 +1,53 @@
 import { useContext, useState } from "react";
 import { GoPencil } from "react-icons/go";
 import { RiDeleteBinFill } from "react-icons/ri";
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 
 const AssignmentCard = ({item}) => {
-    const { title, photoURL, marks, email, descriptions, date, difficultyLevel, name, _id } =
+    const { title, photoURL, marks, email, descriptions, date,  difficultyLevel, name, _id } =
     item;
 
     const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const { user } = useContext(AuthContext);
-const handleDelete = ()=>{
+  const {id} = useParams()
 
-    const url = `http://localhost:5000/assignments/${user?.email}`
 
-axios
-.delete(url)
-  .then((response) => {
-    setItems(response.data);
-    setLoading(false);
-  })
-  .then((error) => {
-    console.log(error);
-    setLoading(false);
-  });
-console.log(items);
-}
+  const handleDelete = () => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const url = `http://localhost:5000/assignments/${user?.email}`;
+        axios.delete(url)
+          .then((response) => {
+            Swal.fire({
+              title: "Deleted!",
+              text: "Your file has been deleted.",
+              icon: "success"
+            });
+            setItems(response.data);
+            setLoading(false);
+          })
+          .catch((error) => {
+            console.log(error);
+            setLoading(false);
+          });
+      }
+    });
+  };
+
+
 
     return (
         <div>
@@ -66,7 +85,7 @@ console.log(items);
         </div>
 
         <div className="flex justify-between mt-3 item-center">
-            <NavLink><button className="btn btn-sm rounded-full  text-lg lg:tooltip font-bold text-gray-700 dark:text-gray-200 md:text-xl " data-tip="Update"><GoPencil /></button></NavLink>
+            <NavLink to={`/update/${_id}`}><button className="btn btn-sm rounded-full  text-lg lg:tooltip font-bold text-gray-700 dark:text-gray-200 md:text-xl " data-tip="Update"><GoPencil /></button></NavLink>
            <NavLink> <button onClick={()=>handleDelete(email)} className="btn btn-sm rounded-full  text-lg lg:tooltip  font-bold text-gray-700 dark:text-gray-200 md:text-xl" data-tip="Delete"><RiDeleteBinFill /></button></NavLink>
             <NavLink to={`/details/${_id}`}><button className="btn btn-sm px-2 py-1 text-xs lg:tooltip  font-bold text-white uppercase transition-colors duration-300 transform bg-gray-800 rounded dark:bg-gray-700 hover:bg-gray-700 dark:hover:bg-gray-600 focus:outline-none focus:bg-gray-700 dark:focus:bg-gray-600" data-tip="Details">View Details</button></NavLink>
         </div>

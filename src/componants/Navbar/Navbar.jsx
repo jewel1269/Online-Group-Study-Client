@@ -22,7 +22,7 @@ const Navbar = () => {
       <div className="lg:ml-16 lg:mr-6 py-1 mx-auto">
         <div className="lg:flex lg:items-center">
           <div className="flex items-center justify-between">
-          <div className='flex items-center mr-10'>
+          <div className='flex items-center '>
             <img className="lg:w-20 h-12 w-12 lg:h-16" src={logo} alt="" />
             
             <h2 className='lg:text-2xl font-bold'>QEDUCATO</h2>
@@ -44,15 +44,23 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className={`lg:flex lg:gap-[450px]  lg:items-center ${isOpen ? 'block' : 'hidden'}`}>
-            <div  className="flex flex-col text-gray-600 capitalize dark:text-gray-300 lg:flex  lg:px-16 gap-2 lg:-mx-8 lg:flex-row lg:items-center">
+          <div className={`lg:flex lg:gap-[430px]  lg:items-center ${isOpen ? 'block' : 'hidden'}`}>
+            <div  className="flex lg:ml-3 flex-col text-gray-600 capitalize dark:text-gray-300 lg:flex  lg:px-16 gap-2 lg:-mx-8 lg:flex-row lg:items-center">
                
+               {
+                user?  <><Link to={"/"}  className="mt-2 transition-colors duration-300  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Home</strong></Link>
+                <Link to={"/AllAssignment"} className="mt-2 transition-colors duration-300  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Assignments</strong></Link>
+                <Link to={"/createA"} className="mt-2 transition-colors duration-300  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Create..Assignment</strong></Link>
+                <Link to={"/PendingAssignment"} className="mt-2 transition-colors duration-300  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"> <strong>Pending..Assignments</strong></Link>
+                <Link to={"/register"}  className="mt-2 transition-colors duration-300  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Register</strong></Link></>
+                :
+                <><Link to={"/"}  className="mt-2 transition-colors duration-300  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Home</strong></Link>
+                <Link to={"/AllAssignment"} className="mt-2 transition-colors duration-300  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Assignments</strong></Link>
+                <Link to={"/register"}  className="mt-2 transition-colors duration-300  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Register</strong></Link></>
+                
+               }
               
-                 <Link to={"/"}  className="mt-2 transition-colors duration-300  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Home</strong></Link>
-              <Link to={"/AllAssignment"} className="mt-2 transition-colors duration-300  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Assignments</strong></Link>
-              <Link to={"/createA"} className="mt-2 transition-colors duration-300  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Create..Assignment</strong></Link>
-              <Link to={"/PendingAssignment"} className="mt-2 transition-colors duration-300  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"> <strong>Pending..Assignments</strong></Link>
-              <Link to={"/register"}  className="mt-2 transition-colors duration-300  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Register</strong></Link>
+               
              
 
               <div className="relative mt-4 lg:mt-0 lg:mx-4">
@@ -65,8 +73,10 @@ const Navbar = () => {
                 <input type="text" className="w-full rounded-2xl py-1 pl-10 pr-4 text-gray-700 placeholder-gray-600 bg-white border-b border-gray-600 dark:placeholder-gray-300 dark:focus:border-gray-300 lg:w-56 lg:border-transparent dark:bg-gray-800 dark:text-gray-300 focus:outline-none focus:border-gray-600" placeholder="Search" />
               </div>
             </div>
+            
 
             <div className="flex justify-center mt-6 lg:flex lg:mt-0 lg:-mx-2">
+            <input type="checkbox" value="synthwave" className="toggle mt-4  theme-controller"/>
             <div className="dropdown dropdown-end">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
@@ -83,7 +93,7 @@ const Navbar = () => {
         <button  onClick={handleSignOut} className='btn btn-xs font-semibold text-md lg:w-36  btn-outline mt-2 btn-error'><NavLink>2. Logout</NavLink></button>
       </ul>
     </div>
-    <NavLink to={"/logIn"}><button className="btn btn-warning btn-sm lg:w-24 mt-2 btn-outline w-16">Login</button></NavLink>
+    <NavLink to={"/logIn"}><button className="btn  btn-warning btn-sm lg:w-24 mt-2 btn-outline w-16">Login</button></NavLink>
             </div>
           </div>
         </div>

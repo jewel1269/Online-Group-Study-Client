@@ -9,7 +9,8 @@ const MyAssignment = () => {
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(true);
     const { user } = useContext(AuthContext);
-    const url = `http://localhost:5000/assignments/${user?.email}`
+
+    const url = `http://localhost:5000/submittedAssignment/${user?.email}`
   
     axios.get(url)
       .then((response) => {
@@ -21,6 +22,7 @@ const MyAssignment = () => {
         setLoading(false);
       });
     console.log(items);
+
     if (loading) {
       return <span className="loading loading-ring lg:ml-[50%] lg:mt-[20%] bg-red-600 loading-lg"></span>;
   }
@@ -32,10 +34,10 @@ const MyAssignment = () => {
 
     return (
         <div>
-          <section className="container px-4 mx-auto">
+          <section className="container lg:mt-5 px-4 mx-auto">
     <div className="flex items-center gap-x-3">
         <h2 className="text-lg font-medium text-gray-800 dark:text-white">Team members</h2>
-        <span className="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full dark:bg-gray-800 dark:text-blue-400">100 users</span>
+        <span className="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full dark:bg-gray-800 dark:text-blue-400">{items.length}</span>
     </div>
 
     <div className="flex flex-col mt-6">
@@ -48,7 +50,7 @@ const MyAssignment = () => {
                                 <th scope="col" className="py-3.5 px-4 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
                                     <div className="flex items-center gap-x-3">
                                         <input type="checkbox" className="text-blue-500 border-gray-300 rounded dark:bg-gray-900 dark:ring-offset-gray-900 dark:border-gray-700" />
-                                        <span>Name</span>
+                                        <span>Title</span>
                                     </div>
                                 </th>
                                 <th scope="col" className="px-12 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -63,7 +65,15 @@ const MyAssignment = () => {
                                 </th>
                                 <th scope="col" className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
                                     <button className="flex items-center gap-x-2">
-                                        <span>Role</span>
+                                        <span>obtained Marks</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-4 h-4">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                                        </svg>
+                                    </button>
+                                </th>
+                                <th scope="col" className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                    <button className="flex items-center gap-x-2">
+                                        <span>Marks</span>
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-4 h-4">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
                                         </svg>
@@ -86,7 +96,7 @@ const MyAssignment = () => {
 
 <div>
     {
-        items.map(item=><Card key={item._id} item={item}></Card>)
+       items && items.map(item=><Card key={item._id} item={item}></Card>)
     }
 </div>
 

@@ -19,7 +19,7 @@ const AllAssignment = () => {
       console.log(error);
       setLoading(false);
     });
-  console.log(items);
+  // console.log(items);
   if (loading) {
     return <span className="loading loading-ring lg:ml-[50%] lg:mt-[20%] bg-red-600 loading-lg"></span>;
 }

@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Form, createBrowserRouter } from "react-router-dom";
 import Root from "../Root/Root";
 import Home from "../Home/Home";
 import Login from "../UserIndenty/Login";
@@ -8,6 +8,11 @@ import PendingAssignment from "../PendingAssignment/PendingAssignment";
 import AllAssignment from "../AllAssignment/AllAssignment";
 import Details from "../AllAssignment/Details";
 import MyAssignment from "../MyAssignment/MyAssignment";
+import PrivateRoute from "../Private/PrivateRoute.jsx/PrivateRoute";
+import Update from "../UpdateAssignmen t/Update";
+import Exmeener from "../PendingAssignment/Exmeener";
+import PendingCard from "../PendingAssignment/PendingCard";
+
 
 export const router = createBrowserRouter([
     {
@@ -29,11 +34,16 @@ export const router = createBrowserRouter([
         },
         {
           path: "/createA",
-          element:<CreateA/>
+          element:<PrivateRoute><CreateA/></PrivateRoute>
       },
       {
         path: "/PendingAssignment",
-        element: <PendingAssignment/>
+        element: <PrivateRoute><PendingAssignment/></PrivateRoute>
+      },
+      {
+        path: "/PendingCard/:id",
+        element: <PendingCard/>
+
       },
       {
         path: "AllAssignment",
@@ -45,8 +55,16 @@ export const router = createBrowserRouter([
       },
       {
         path: "/MyAssignment",
-        element: <MyAssignment/>
+        element: <PrivateRoute><MyAssignment></MyAssignment></PrivateRoute>
 
+      },
+      {
+        path: "/update/:id" ,
+        element: <Update></Update>
+      },
+      {
+        path: "/exmeener/:id",
+        element: <Exmeener/>
       }
       ],
     },
