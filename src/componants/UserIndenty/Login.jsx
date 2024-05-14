@@ -44,7 +44,7 @@ const Login = () => {
         googleLogin(googleProvider)
             .then((result) => {
                 console.log(result);
-                const {data} = axios.post("http://localhost:5000/jwt", {email: result?.user?.email})
+                const {data} = axios.post("http://localhost:5000/jwt", {email: result?.user?.email}, {withCredentials: true})
                 console.log(data);
         
                 toast.success("Successfully Login");
@@ -57,10 +57,11 @@ const Login = () => {
 
     const logInWithGithub = (e) => {
         e.preventDefault();
-
         githubLogin(githubProvider)
             .then((result) => {
                 console.log(result);
+                const {data} = axios.post("http://localhost:5000/jwt", {email: result?.user?.email}, {withCredentials: true})
+                console.log(data);
                 toast.success("Successfully Login");
                 navigate(location.state || '/');
             })

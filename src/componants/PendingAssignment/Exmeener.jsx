@@ -10,7 +10,7 @@ const Exmeener = () => {
     
     
    useEffect(()=>{
-    axios.get("http://localhost:5000/submittedAssignment")
+    axios.get("http://localhost:5000/submittedAssignment", {withCredentials: true})
     .then(response => {
         setItems(response.data);
     })
@@ -20,6 +20,7 @@ const Exmeener = () => {
    },[])
 
 const item = items.find(item=>item._id ===id)
+console.log(item);
 
 
 const handleSubmitBtn = (e) => {
@@ -36,7 +37,7 @@ const handleSubmitBtn = (e) => {
     console.log(examerFeedback);
 
     const url = `http://localhost:5000/submittedAssignment/${id}` ;
-    axios.post(url, examerFeedback)
+    axios.post(url,  examerFeedback, {withCredentials: true})
     .then((response) => {
         if (response.data) {
             console.log(response);

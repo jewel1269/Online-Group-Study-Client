@@ -11,7 +11,7 @@ const AllAssignment = () => {
 
   useEffect(()=>{
     axios
-    .get("http://localhost:5000/assignments", {withCredentials: true})
+    .get("http://localhost:5000/assignments")
     .then((response) => {
       setItems(response.data);
       setLoading(false);
