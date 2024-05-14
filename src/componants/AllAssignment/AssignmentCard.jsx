@@ -16,45 +16,62 @@ const AssignmentCard = ({item}) => {
   const { user } = useContext(AuthContext);
   const {id} = useParams()
 
-
-
   const handleDelete = () => {
-    Swal.fire({
-      title: "Are you sure?",
-      text: "You won't be able to revert this!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!"
-    }).then((result) => {
-      if (result.isConfirmed) {
-        const url = `http://localhost:5000/assignments/${user?.email}`;
-        axios.delete(url)
-          .then((response) => {
-            Swal.fire({
-              title: "Deleted!",
-              text: "Your file has been deleted.",
-              icon: "success"
+    if (user.email === email) {
+      Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          const url = `http://localhost:5000/assignments/${user?.email}`;
+          axios.delete(url, { withCredentials: true })
+            .then(() => {
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your assignment has been deleted.",
+                icon: "success"
+              });
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
+              
+            })
+            .catch((error) => {
+              console.error(error);
+              Swal.fire({
+                title: "Error",
+                text: "Failed to delete assignment.",
+                icon: "error",
+                confirmButtonText: "Ok",
+              });
             });
-            setItems(response.data);
-            setLoading(false);
-          })
-          .catch((error) => {
-            console.log(error);
-            setLoading(false);
-          });
-      }
-    });
+        }
+      });
+    } else {
+      // Alert the user that they can only delete their own assignments
+      Swal.fire({
+        title: "Unauthorized",
+        text: "You can only delete your own assignments.",
+        icon: "error",
+        confirmButtonText: "Ok",
+      });
+    }
   };
 
+
+  
 
 
 
     return (
         <div>
-            <div className="flex max-w-md border hover:bg-lime-200 border-green-200 overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
-    <div className="w-1/3 bg-cover">
+            <div className="flex max-w-md border hover:zo hover:bg-lime-200 border-green-200 overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+    <div className="w-1/2  bg-cover">
         <img src={photoURL} alt="" />
     </div>
 
@@ -89,13 +106,18 @@ const AssignmentCard = ({item}) => {
         <div className="flex justify-between mt-3 item-center">
             <NavLink to={`/update/${_id}`}><button className="btn btn-sm rounded-full  text-lg lg:tooltip font-bold text-gray-700 dark:text-gray-200 md:text-xl " data-tip="Update"><GoPencil /></button></NavLink>
            <NavLink> <button onClick={()=>handleDelete(email)} className="btn btn-sm rounded-full  text-lg lg:tooltip  font-bold text-gray-700 dark:text-gray-200 md:text-xl" data-tip="Delete"><RiDeleteBinFill /></button></NavLink>
-            <NavLink to={`/details/${_id}`}><button className="btn btn-sm px-2 py-1 text-xs lg:tooltip  font-bold text-white uppercase transition-colors duration-300 transform bg-gray-800 rounded dark:bg-gray-700 hover:bg-gray-700 dark:hover:bg-gray-600 focus:outline-none focus:bg-gray-700 dark:focus:bg-gray-600" data-tip="Details">View Details</button></NavLink>
+            <NavLink to={`/details/${_id}`}><button className="btn btn-sm px-2 py-1 text-xs lg:tooltip  font-bold uppercase transition-colors duration-300 transform  rounded dark:bg-gray-700 dark:hover:bg-gray-600 focus:outline-none focus:bg-gray-700 dark:focus:bg-gray-600" data-tip="Details">View Details</button></NavLink>
         </div>
     </div>
 </div>
 
         </div>
     );
-};
+}
 
 export default AssignmentCard;
+
+
+
+
+

@@ -35,6 +35,7 @@ const handleSubmitBtn = (e) => {
         status
     };
     console.log(examerFeedback);
+    
 
     const url = `http://localhost:5000/submittedAssignment/${id}` ;
     axios.post(url,  examerFeedback, {withCredentials: true})
@@ -61,7 +62,7 @@ const handleSubmitBtn = (e) => {
     return (
         <section className="lg:max-w-4xl mt-3 lg:mt-40 shadow-xl p-6 mx-auto bg-white rounded-md border border-gray-300 dark:bg-gray-800">
         <h2 className="text-lg font-semibold text-gray-700  dark:text-white"><strong>Give Mark:</strong></h2>
-        <h1><strong>Pdf/Doc:</strong><a href={item?.pdf}> {item?.pdf}</a></h1>
+        <h1><strong>Pdf/Doc:</strong><a className="font-semibold underline" href={item?.pdf}>   {item?.pdf}</a></h1>
             <h1><strong>Note:</strong> {item?.feedback}</h1>
         <form onSubmit={handleSubmitBtn}>
             

@@ -17,6 +17,9 @@ const MyAssignment = () => {
     .then((response) => {
       setItems(response.data);
       setLoading(false);
+      setTimeout(() => {
+        window.location.reload();
+      }, 1000);
     })
     .then((error) => {
       console.log(error);

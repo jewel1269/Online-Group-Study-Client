@@ -51,7 +51,7 @@ const CreateA = () => {
   return (
 
     <div>
-      <section className="bg-white dark:bg-gray-900">
+      <section className="bg-white  border border-gray-400 rounded-2xl mx-4 my-4 shadow-md dark:bg-gray-900">
         <div className="lg:flex lg:items-center lg:justify-center min-h-screen">
           <div className="lg:ml-28">
             <img src={cover} alt="" />
@@ -126,6 +126,7 @@ const CreateA = () => {
                     id="title"
                     type="text"
                     name="title"
+                    required
                     placeholder="Title"
                     className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                   />
@@ -139,6 +140,7 @@ const CreateA = () => {
                     type="text"
                     id="photoURL"
                     name="photoURL"
+                    required
                     placeholder="thumbnail Image URL"
                     className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                   />
@@ -153,6 +155,7 @@ const CreateA = () => {
                     placeholder="marks"
                     id="marks"
                     name="marks"
+                    required
                     className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                   />
                 </div>
@@ -162,6 +165,7 @@ const CreateA = () => {
                     className="appearance-none border mt-6 border-slate-400bg-stone-50  w-full p-4 rounded-md px-3 pr-8 leading-tight focus:outline-none focus:shadow-outline"
                     id="difficultyLevel"
                     name="difficultyLevel"
+                    required
                     type="text"
                   >
                     <option value=""> assignment difficulty level</option>
@@ -182,6 +186,7 @@ const CreateA = () => {
                     type="date"
                     name="date"
                     id="date"
+                    required
                     placeholder="Enter your password"
                     className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                   />
@@ -196,6 +201,7 @@ const CreateA = () => {
                     placeholder="Descriptions........."
                     id="descriptions"
                     name="descriptions"
+                    required
                     className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                   />
                 </div>

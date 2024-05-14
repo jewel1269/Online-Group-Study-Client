@@ -51,7 +51,7 @@ const Update = () => {
       const url = `http://localhost:5000/assignments/${id}`;
       const response = await axios.put(url, assignment);
       if (response.data) {
-        Swal.fire("Saved!", "", "success");
+        Swal.fire("Date Updated!", "", "success");
         form.reset();
         navi(location.state)
         

@@ -8,6 +8,8 @@ const AllAssignment = () => {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const { user } = useContext(AuthContext);
+  const [filter , setFilter] = useState(' ')
+
 
   useEffect(()=>{
     axios
@@ -15,15 +17,32 @@ const AllAssignment = () => {
     .then((response) => {
       setItems(response.data);
       setLoading(false);
+     
     })
     .then((error) => {
       console.log(error);
       setLoading(false);
     });
   },[])
+
+  useEffect(()=>{
+    axios
+    .get(`http://localhost:5000/assignments?filter=${filter}`)
+    .then((response) => {
+      setItems(response.data);
+    })
+  },[filter])
+
+
+
+
+
+  const pages= [1,2,3,4]
   if (loading) {
     return <span className="loading loading-ring lg:ml-[50%] lg:mt-[20%] bg-red-600 loading-lg"></span>;
 }
+
+
 
 
 
@@ -44,21 +63,24 @@ const AllAssignment = () => {
             </p>
 
             <div className="relative">
-              <select
-                className="appearance-none lg:w-64 border bg-slate-200 mt-6 border-slate-400bg-stone-50  w-full p-2 rounded-md px-2 pr-8 leading-tight focus:outline-none focus:shadow-outline"
-                id="difficultyLevel"
-                name="difficultyLevel"
-                type="text"
-              >
-                <option value="">Sort By</option>
-                <option value="easy">Easy</option>
-                <option value="medium">Medium</option>
-                <option value="Hard">Hard</option>
-              </select>
-              <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
-                <IoIosArrowDown className="mt-4 text-gray-600" />
-              </div>
-            </div>
+    <select
+
+      className="appearance-none lg:w-64 border bg-slate-200 mt-6 border-slate-400bg-stone-50  w-full p-2 rounded-md px-2 pr-8 leading-tight focus:outline-none focus:shadow-outline"
+      onChange={e=>setFilter(e.target.value)}
+      value={filter}
+      name="difficultyLevel"
+      id="difficultyLevel"
+      type="text"
+    >
+      <option value="">Filter By</option>
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="Hard">Hard</option>
+    </select>
+  <div className="absolute inset-y-0 mt-2 right-0 flex items-center px-2 pointer-events-none">
+    <IoIosArrowDown className="mt-4 text-gray-600" />
+  </div>
+</div>
           </div>
         </section>
       </div>
@@ -70,7 +92,7 @@ const AllAssignment = () => {
       <div>
       
     <div className="flex md:ml-[23%] lg:ml-[37%] mt-10">
-      <a href="#" className="px-4 py-2 mx-1 text-gray-500 capitalize bg-white rounded-md cursor-not-allowed dark:bg-gray-800 dark:text-gray-600">
+      <a href="#" className="px-4 py-2 mx-1 text-gray-700 capitalize bg-white rounded-md hover:text-white hover:bg-blue-500 dark:bg-gray-800 dark:text-gray-600">
         <div className="flex items-center -mx-1">
           <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 mx-1 rtl:-scale-x-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
@@ -79,10 +101,10 @@ const AllAssignment = () => {
         </div>
       </a>
       
-      {[1, 2, 3, 4, 5].map(pageNumber => (
-        <a key={pageNumber} href="#" className="hidden px-4 py-2 mx-1 text-gray-700 transition-colors duration-300 transform bg-white rounded-md sm:inline dark:bg-gray-800 dark:text-gray-200 hover:bg-blue-500 dark:hover:bg-blue-500 hover:text-white dark:hover:text-gray-200">
+      {pages.map(pageNumber => (
+        <button key={pageNumber} href="#" className="hidden px-4 py-2 mx-1 text-gray-700 transition-colors duration-300 transform bg-white rounded-md sm:inline dark:bg-gray-800 dark:text-gray-200 hover:bg-blue-500 dark:hover:bg-blue-500 hover:text-white dark:hover:text-gray-200">
           {pageNumber}
-        </a>
+        </button>
       ))}
 
       <a href="#" className="px-4 py-2 mx-1 text-gray-700 transition-colors duration-300 transform bg-white rounded-md dark:bg-gray-800 dark:text-gray-200 hover:bg-blue-500 dark:hover:bg-blue-500 hover:text-white dark:hover:text-gray-200">
