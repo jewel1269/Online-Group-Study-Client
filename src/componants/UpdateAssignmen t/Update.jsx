@@ -70,7 +70,7 @@ const Update = () => {
 
   return (
     <div>
-      <section className="bg-white border border-gray-400 rounded-2xl mx-4 my-4 shadow-md dark:bg-gray-900">
+      <section className=" border border-gray-400 rounded-2xl mx-4 my-4 shadow-md dark:bg-gray-900">
         <div className="lg:flex lg:items-center lg:justify-center min-h-screen">
           <div className="lg:ml-28">
             <img src={cover} alt="" />

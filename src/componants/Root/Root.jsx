@@ -3,6 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import Footer from "../HomeInfo/Footer/Footer";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import 'animate.css';
 
 
 const Root = () => {
@@ -11,6 +12,7 @@ const Root = () => {
             <Navbar/>
             <Outlet/>
             <Footer/>
+            
 
             <ToastContainer />
         </div>

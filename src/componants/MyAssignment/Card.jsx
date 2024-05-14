@@ -30,6 +30,9 @@ const Card = ({item}) => {
                 });
                 setItems(response.data);
                 setLoading(false);
+                setTimeout(() => {
+                    window.location.reload();
+                  }, 1000);
               })
               .catch((error) => {
                 console.log(error);
@@ -41,7 +44,7 @@ const Card = ({item}) => {
     
     return (
         <div className='lg:ml-[10%]'>
-            <tbody className="bg-white divide-y  divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
+            <tbody className="divide-y  divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
                             <tr>
                                 <td className="px-4  py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
                                     <div className="inline-flex items-center gap-x-3">

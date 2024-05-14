@@ -3,16 +3,17 @@
 const Futures = () => {
     return (
         <div>
-            <section className="bg-white dark:bg-gray-900">
+            <section  className=" dark:bg-gray-900">
     <div className="container px-6 py-10 mx-auto">
         <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">Executive Features for Online Group Study</h1>
+      
 
         <p className="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">
         "Elevate your online group study with our executive features. Enjoy interactive sessions, virtual whiteboards, breakout rooms, and seamless file sharing for enhanced collaboration and learning. Join us now!
         </p>
 
-        <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-4">
-            <div className="flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
+        <div className=" grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-4">
+            <div className="animate__animated animate__zoomIn 6s flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
                 <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://www.exciteon.com/wp-content/uploads/2023/06/trichy-creative-logo-designer-scaled.jpg" alt=""></img>
 
                 <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">Professional Course</h1>
@@ -49,7 +50,7 @@ const Futures = () => {
                 </div>
             </div>
 
-            <div className="flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
+            <div className="animate__animated animate__zoomIn 6s flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
                 <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://education.stthomas.edu/_media-library/_images/degrees-and-licensures/graduate-studies-k-12-education-2.1/ma-in-educational-studies-for-experienced-teachers/ma-in-educational-studies-for-experienced/speaker-presenting-crowd.jpg" alt=""></img>
 
                 <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">Experienced Instructors</h1>
@@ -86,7 +87,7 @@ const Futures = () => {
                 </div>
             </div>
 
-            <div className="flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
+            <div className="animate__animated animate__fadeInDown 6s flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
                 <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://www.shutterstock.com/image-illustration/practical-training-gear-sign-concept-260nw-327573113.jpg" alt=""></img>
 
                 <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">Practical Traning</h1>
@@ -122,7 +123,7 @@ const Futures = () => {
                     </a>
                 </div>
             </div>
-            <div className="flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
+            <div className="animate__animated animate__fadeInDown 6s flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
                 <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://static.vecteezy.com/system/resources/previews/017/489/601/original/check-mark-approved-or-certification-badge-logo-design-certified-medal-icon-check-mark-template-flat-design-check-mark-badge-sign-free-vector.jpg" alt=""></img>
 
                 <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">Validated Certificated</h1>
@@ -158,7 +159,7 @@ const Futures = () => {
                     </a>
                 </div>
             </div>
-            <div className="flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
+            <div className="animate__animated animate__fadeInLeftBig 6s flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
                 <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://miro.medium.com/v2/resize:fit:1400/1*RU4maqP2qMqMP5OI2bYEbw.jpeg" alt=""></img>
 
                 <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">Showing Your Creativity</h1>
@@ -195,7 +196,7 @@ const Futures = () => {
                 </div>
             </div>
 
-            <div className="flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
+            <div className="animate__animated animate__fadeInRight 6s flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
                 <img  className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://cdn.vectorstock.com/i/500p/36/93/support-line-icon-outline-vector-30913693.jpg" alt=""></img>
 
                 <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">24/7 Support</h1>

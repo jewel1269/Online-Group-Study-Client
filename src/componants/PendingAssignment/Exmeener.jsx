@@ -51,7 +51,7 @@ const handleSubmitBtn = (e) => {
     })
     .catch((error) => {
         console.log(error);
-        Swal.fire("Error", "Failed to save changes", "error");
+        Swal.fire("Error", "Sorry you don't give this mark", "error");
     });
   };
 

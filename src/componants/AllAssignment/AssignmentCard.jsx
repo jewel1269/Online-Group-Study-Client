@@ -70,7 +70,7 @@ const AssignmentCard = ({item}) => {
 
     return (
         <div>
-            <div className="flex max-w-md border hover:zo hover:bg-lime-200 border-green-200 overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+            <div className="animate__animated animate__zoomIn 6s flex max-w-md border hover:zo hover:bg-lime-200 border-green-200 overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
     <div className="w-1/2  bg-cover">
         <img src={photoURL} alt="" />
     </div>

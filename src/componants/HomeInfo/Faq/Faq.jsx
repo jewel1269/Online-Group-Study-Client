@@ -3,7 +3,7 @@
 const Faq = () => {
     return (
         <div>
-           <section className="bg-white dark:bg-gray-900">
+           <section className=" dark:bg-gray-900">
     <div className="container px-6 py-12 mx-auto">
         <h1 className="text-2xl font-semibold text-center text-gray-800 lg:text-3xl dark:text-white">Have any Questions?</h1>
 

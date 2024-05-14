@@ -21,7 +21,7 @@ const PendingCard = ({ item }) => {
 
   return (
     <div>
-      <div className="flex flex-col bg-gray-50 items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
+      <div className="animate__animated animate__slideInDown 2s flex flex-col  items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
         <img
           className="object-cover w-auto h-32 rounded-md ring-4 ring-gray-300"
           src={photoURL}

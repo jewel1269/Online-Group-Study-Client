@@ -58,7 +58,7 @@ const Register = () => {
         "url(https://img.freepik.com/premium-vector/white-gray-wave-abstract-background-soft-design-graphic-work_41084-469.jpg?size=626&ext=jpg&ga=GA1.1.1369675164.1715212800&semt=ais)",
       }}
     >
-      <div className="hero min-h-screen ">
+      <div className="hero min-h-screen dark:bg-gray-100 dark:text-gray-800 ">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Register Now </h1>
