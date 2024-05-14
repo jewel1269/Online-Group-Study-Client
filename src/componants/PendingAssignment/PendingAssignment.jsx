@@ -8,7 +8,7 @@ const PendingAssignment = () => {
     const [items, setItems]= useState([])
     
     useEffect(()=>{
-        axios.get("http://localhost:5000/submittedAssignment")
+        axios.get("http://localhost:5000/submittedAssignment", {withCredentials: true})
     .then(response => {
         setItems(response.data);
     })

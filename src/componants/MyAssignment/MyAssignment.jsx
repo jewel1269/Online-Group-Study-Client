@@ -13,7 +13,7 @@ const MyAssignment = () => {
     const url = `http://localhost:5000/submittedAssignment/${user?.email}`
   
    useEffect(()=>{
-    axios.get(url)
+    axios.get(url, {withCredentials: true})
     .then((response) => {
       setItems(response.data);
       setLoading(false);
@@ -23,7 +23,7 @@ const MyAssignment = () => {
       setLoading(false);
     });
   console.log(items);
-   },[url, items])
+   },[url])
 
     if (loading) {
       return <span className="loading loading-ring lg:ml-[50%] lg:mt-[20%] bg-red-600 loading-lg"></span>;

@@ -53,7 +53,7 @@ const AssignmentCard = ({item}) => {
 
     return (
         <div>
-            <div className="flex max-w-md border border-green-200 overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+            <div className="flex max-w-md border hover:bg-lime-200 border-green-200 overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
     <div className="w-1/3 bg-cover">
         <img src={photoURL} alt="" />
     </div>

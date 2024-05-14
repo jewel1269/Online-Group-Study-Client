@@ -4,6 +4,7 @@ import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { toast } from "react-toastify";
 import logo from "../../assets/login.svg"
+import axios from "axios";
 
 const googleProvider = new GoogleAuthProvider();
 const githubProvider = new GithubAuthProvider();
@@ -18,11 +19,16 @@ const Login = () => {
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
         signIn(email, password)
             .then((result) => {
-                console.log(result);
+                const loggedInUser =result.user;
+                console.log(loggedInUser);
                 toast.success("Successfully Login");
+                const user = {email};
+                axios.post("http://localhost:5000/jwt", user, {withCredentials: true})
+                .then(res=> {
+                    console.log(res.data);
+                })
                 navigate(location.state || '/');
                 form.reset();
             })
@@ -32,12 +38,15 @@ const Login = () => {
             });
     };
 
-    const logInWithGoogle = (e) => {
+    const logInWithGoogle =  (e) => {
         e.preventDefault();
 
         googleLogin(googleProvider)
             .then((result) => {
                 console.log(result);
+                const {data} = axios.post("http://localhost:5000/jwt", {email: result?.user?.email})
+                console.log(data);
+        
                 toast.success("Successfully Login");
                 navigate(location.state || '/');
             })

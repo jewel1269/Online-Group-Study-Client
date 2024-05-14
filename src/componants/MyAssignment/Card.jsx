@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useContext, useState } from "react";
 import Swal from "sweetalert2";
-import { AuthContext } from "../Provider/AuthProvider";
+
 
 const Card = ({item}) => {
     console.log(item);
@@ -47,9 +47,9 @@ const Card = ({item}) => {
                                     <div className="inline-flex items-center gap-x-3">
                                         <input type="checkbox" className="text-blue-500 border-gray-300 rounded dark:bg-gray-900 dark:ring-offset-gray-900 dark:border-gray-700" />
                                         <div className="flex items-center gap-x-2">
-                                            <img className="object-cover w-10 h-10 rounded-full" src={item.photoURL} alt="" />
+                                            <img className="object-cover w-10 h-10 rounded-full" src={item?.photoURL} alt="" />
                                             <div>
-                                                <h2 className="font-medium text-gray-800 dark:text-white">{item.title}</h2>
+                                                <h2 className="font-medium text-gray-800 dark:text-white">{item?.title}</h2>
                                                 
                                             </div>
                                         </div>
@@ -58,12 +58,12 @@ const Card = ({item}) => {
                                 <td className="px-12 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
                                     <div className="inline-flex lg:ml-10 items-center px-3 py-1 rounded-full gap-x-2 bg-emerald-100/60 dark:bg-gray-800">
                                         <span className="h-1.5 w-1.5 rounded-full bg-orange-500"></span>
-                                        <h2 className="text-sm font-normal text-orange-400">{item.status}</h2>
+                                        <h2 className="text-sm font-normal text-orange-400">{item?.status}</h2>
                                     </div>
                                 </td>
-                                <td className="px-4 lg:px-20 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap"><p className='lg:ml-32 font-bold'>{item.obtained}</p></td>
-                                <td className="px-4 lg:px-20 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap"><p className='lg:ml-32 font-bold'>{item.marks}</p></td>
-                                <td className="px-4  py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap"><p className='lg:ml-12'>{item.appreciate}</p></td>
+                                <td className="px-4 lg:px-20 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap"><p className='lg:ml-32 font-bold'>{item?.obtained}</p></td>
+                                <td className="px-4 lg:px-20 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap"><p className='lg:ml-32 font-bold'>{item?.marks}</p></td>
+                                <td className="px-4  py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap"><p className='lg:ml-12'>{item?.appreciate}</p></td>
                                
                                 <td className="px-4 py-4 text-sm whitespace-nowrap">
                                     <div className="flex lg:gap-10 lg:ml-10 items-center gap-x-6">
