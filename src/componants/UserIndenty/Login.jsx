@@ -5,6 +5,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 import { toast } from "react-toastify";
 import logo from "../../assets/login.svg"
 import axios from "axios";
+import { Helmet } from "react-helmet";
 
 const googleProvider = new GoogleAuthProvider();
 const githubProvider = new GithubAuthProvider();
@@ -72,12 +73,14 @@ const Login = () => {
 
     return (
         <div
+        
             className="hero min-h-screen"
             style={{
                 backgroundImage:
                     "url(https://img.freepik.com/premium-vector/white-gray-wave-abstract-background-soft-design-graphic-work_41084-469.jpg?size=626&ext=jpg&ga=GA1.1.1369675164.1715212800&semt=ais)",
             }}
         >
+            <Helmet><title>LogIn</title></Helmet>
            <div className="lg:flex items-center gap-10">
            <div>
                 <img src={logo} alt="" />

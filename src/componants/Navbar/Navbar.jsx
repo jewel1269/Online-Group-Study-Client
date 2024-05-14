@@ -4,6 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
 import avater from "../../assets/avater-removebg-preview.png"
 import "./Style.css"
+import { Tooltip } from 'react-tooltip';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -81,19 +82,19 @@ const Navbar = () => {
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
           {
-            user? <img alt="Tailwind CSS Navbar component" src={user?.photoURL} />
+            user? <img data-tooltip-id="my-tooltip"  data-tooltip-content={user?.displayName} alt="Tailwind CSS Navbar component" src={user?.photoURL} />
             :
             <img alt=" w-20 h-16 rounded-full ring ring-gray-300 dark:ring-gray-600" src={avater} />
           }
         </div>
-       
+        <Tooltip id="my-tooltip" />
       </div>
       <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
         <button className='btn btn-xs font-semibold text-md lg:w-36 btn-outline btn-success'> <NavLink to={"/MyAssignment"}>my attempted</NavLink></button>
         <button  onClick={handleSignOut} className='btn btn-xs font-semibold text-md lg:w-36  btn-outline mt-2 btn-error'><NavLink>Logout</NavLink></button>
       </ul>
     </div>
-    <NavLink to={"/logIn"}><button className="btn  btn-warning btn-sm lg:w-24 mt-2 btn-outline w-16">Login</button></NavLink>
+    <NavLink to={"/logIn"}><button className="btn  btn-error btn-sm lg:w-24 mt-2 btn-outline w-16">Login</button></NavLink>
             </div>
           </div>
         </div>

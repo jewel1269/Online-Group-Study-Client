@@ -5,6 +5,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import cover from "../../assets/create-removebg-preview.png";
+import { Helmet } from "react-helmet";
 
 const Update = () => {
   const { id } = useParams();
@@ -70,6 +71,7 @@ const Update = () => {
 
   return (
     <div>
+      <Helmet><title>Updates</title></Helmet>
       <section className=" border border-gray-400 rounded-2xl mx-4 my-4 shadow-md dark:bg-gray-900">
         <div className="lg:flex lg:items-center lg:justify-center min-h-screen">
           <div className="lg:ml-28">

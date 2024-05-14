@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -61,6 +62,7 @@ const handleSubmitBtn = (e) => {
 
     return (
         <section className="lg:max-w-4xl mt-3 lg:mt-40 shadow-xl p-6 mx-auto bg-white rounded-md border border-gray-300 dark:bg-gray-800">
+            <Helmet><title>Exameener</title></Helmet>
         <h2 className="text-lg font-semibold text-gray-700  dark:text-white"><strong>Give Mark:</strong></h2>
         <h1><strong>Pdf/Doc:</strong><a className="font-semibold underline" href={item?.pdf}>   {item?.pdf}</a></h1>
             <h1><strong>Note:</strong> {item?.feedback}</h1>

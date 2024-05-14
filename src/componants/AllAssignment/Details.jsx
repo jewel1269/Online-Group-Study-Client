@@ -3,6 +3,7 @@ import { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 const Details = () => {
   const [details, setDetails] = useState([]);
@@ -88,6 +89,7 @@ const Details = () => {
           "url(https://img.freepik.com/premium-vector/white-gray-wave-abstract-background-soft-design-graphic-work_41084-469.jpg?size=626&ext=jpg&ga=GA1.1.1369675164.1715212800&semt=ais)",
       }}
     >
+      <Helmet><title>Details</title></Helmet>
       <section className=" shadow-2xl shadow-gray-400 dark:bg-gray-900">
         <div className="container px-6 py-10 mx-auto">
           <div className="lg:-mx-6 lg:flex lg:items-center">

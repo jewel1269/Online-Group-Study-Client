@@ -4,6 +4,9 @@ import Footer from "../HomeInfo/Footer/Footer";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import 'animate.css';
+import {Helmet} from "react-helmet";
+import { Tooltip } from 'react-tooltip'
+import 'react-tooltip/dist/react-tooltip.css'
 
 
 const Root = () => {

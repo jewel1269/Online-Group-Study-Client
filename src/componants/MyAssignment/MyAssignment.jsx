@@ -2,6 +2,7 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import Card from "./Card";
+import { Helmet } from "react-helmet";
 
 
 const MyAssignment = () => {
@@ -37,6 +38,7 @@ const MyAssignment = () => {
 
     return (
         <div>
+             <Helmet><title>My Attempted</title></Helmet>
           <section className="container lg:mt-5 px-4 mx-auto">
     <div className="flex items-center gap-x-3">
         <h2 className="text-lg font-medium text-gray-800 dark:text-white">Team members</h2>

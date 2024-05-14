@@ -4,6 +4,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import { Helmet } from "react-helmet";
 const CreateA = () => {
     const {user} = useContext(AuthContext)
   const handleSubmit = (e) => {
@@ -51,6 +52,7 @@ const CreateA = () => {
   return (
 
     <div>
+       <Helmet><title>Create Assignment</title></Helmet>
       <section className="  border border-gray-400 rounded-2xl mx-4 my-4 shadow-md dark:bg-gray-900">
         <div className="lg:flex lg:items-center lg:justify-center min-h-screen">
           <div className="lg:ml-28">

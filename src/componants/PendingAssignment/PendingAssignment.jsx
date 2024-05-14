@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import PendingCard from "./PendingCard";
 import Exmeener from "./Exmeener";
+import { Helmet } from "react-helmet";
 
 
 const PendingAssignment = () => {
@@ -21,6 +22,7 @@ const PendingAssignment = () => {
 
     return (
         <div>
+             <Helmet><title>Pending Assignment</title></Helmet>
             <div>
             <section className="my-8 dark:bg-gray-100 dark:text-gray-800">
 	<div className="container flex flex-col items-center p-4 mx-auto space-y-6 md:p-8">

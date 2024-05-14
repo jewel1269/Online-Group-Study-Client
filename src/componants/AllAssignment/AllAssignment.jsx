@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import AssignmentCard from "./AssignmentCard";
 import { IoIosArrowDown } from "react-icons/io";
 import { AuthContext } from "../Provider/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const AllAssignment = () => {
   const [items, setItems] = useState([]);
@@ -35,6 +36,7 @@ const AllAssignment = () => {
 
   return (
     <div>
+       <Helmet><title>All Assignment</title></Helmet>
       <div>
         <section className=" dark:bg-gray-900">
           <div className="container flex flex-col items-center px-4 py-12 mx-auto text-center">
