@@ -22,9 +22,9 @@ const PendingAssignment = () => {
     return (
         <div>
             <div>
-            <section className="container px-4 mx-auto">
+            <section className="container lg:mt-8 px-4 mx-auto">
     <div className="flex items-center gap-x-3">
-        <h2 className="text-lg font-medium text-gray-800 dark:text-white">Team members</h2>
+        <h2 className="text-lg font-medium text-gray-800 dark:text-white">Pending Assignment</h2>
 
         <span className="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full dark:bg-gray-800 dark:text-blue-400">{items.length}</span>
     </div>

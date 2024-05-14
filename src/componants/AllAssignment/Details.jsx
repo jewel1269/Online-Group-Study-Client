@@ -48,6 +48,7 @@ const Details = () => {
     const difficultyLevel = item.difficultyLevel;
     const date = item.date
     const descriptions = item.descriptions;
+    const status = 'pending';
     const assignmentSubmit = {
       title,
       email,
@@ -55,6 +56,7 @@ const Details = () => {
       pdf,
       photoURL,
       marks,
+      status,
       difficultyLevel,
       date,
       descriptions,

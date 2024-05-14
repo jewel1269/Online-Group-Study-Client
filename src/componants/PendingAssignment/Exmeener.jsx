@@ -27,9 +27,11 @@ const handleSubmitBtn = (e) => {
     const form = e.target;
     const appreciate =form.appreciate.value;
     const obtained = form.obtained.value;
+    const status = 'confirmed'
     const examerFeedback = {
         appreciate,
-        obtained
+        obtained,
+        status
     };
     console.log(examerFeedback);
 
@@ -50,6 +52,8 @@ const handleSubmitBtn = (e) => {
         Swal.fire("Error", "Failed to save changes", "error");
     });
   };
+
+  
 
 
 
