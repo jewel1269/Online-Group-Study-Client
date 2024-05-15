@@ -36,17 +36,17 @@ const Register = () => {
     
 
     const user = { name, email, photoURL, password };
-    console.log(user);
+    // console.log(user);
 
     createUser(email, password)
       .then((result) => {
-        console.log(result.user);
+        // console.log(result.user);
         toast.success("Successfully Registered");
         form.reset()
       
       })
       .then((error) => {
-        console.log(error.message);
+        // console.log(error.message);
         toast.error(error.message);
       });
   };

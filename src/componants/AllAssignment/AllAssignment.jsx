@@ -15,7 +15,7 @@ const AllAssignment = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const url =  `http://localhost:5000/assignments?filter=${filter}` 
+        const url =  `https://online-group-study-server-red.vercel.app/assignments?filter=${filter}` 
         const response = await axios.get(url);
         setItems(response.data);
       } catch (error) {

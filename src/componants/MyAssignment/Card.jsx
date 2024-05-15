@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 
 
 const Card = ({item}) => {
-    console.log(item);
+    // console.log(item);
     const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -20,7 +20,7 @@ const Card = ({item}) => {
           confirmButtonText: "Yes, delete it!"
         }).then((result) => {
           if (result.isConfirmed) {
-            const url = `http://localhost:5000/submittedAssignment/${item?._id}`;
+            const url = `https://online-group-study-server-red.vercel.app/submittedAssignment/${item?._id}`;
             axios.delete(url)
               .then((response) => {
                 Swal.fire({
@@ -35,7 +35,7 @@ const Card = ({item}) => {
                   }, 1000);
               })
               .catch((error) => {
-                console.log(error);
+                // console.log(error);
                 setLoading(false);
               });
           }
@@ -43,8 +43,8 @@ const Card = ({item}) => {
       };
     
     return (
-        <div className='lg:ml-[10%]'>
-            <tbody className="divide-y  divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
+        <div className='lg:ml-[10%]  border rounded-lg lg:mt-5 lg:mb-3  border-gray-200'>
+            <tbody className="divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
                             <tr>
                                 <td className="px-4  py-4 text-sm font-medium text-gray-700 ">
                                     <div className="lg:inline-flex items-center gap-x-3">
@@ -59,10 +59,10 @@ const Card = ({item}) => {
                                     </div>
                                 </td>
                                 <td className="px-12 py-4 text-sm font-medium text-gray-700 ">
-                                    <div className="inline-flex lg:ml-10 items-center px-3 py-1 rounded-full gap-x-2 bg-emerald-100/60 dark:bg-gray-800">
-                                        <span className="h-1.5 w-1.5 rounded-full bg-orange-500"></span>
-                                        <h2 className="text-sm font-normal text-orange-400">{item?.status}</h2>
-                                    </div>
+                                <div className={`inline-flex lg:ml-10 items-center px-3 py-1 rounded-full gap-x-2 ${item?.status === 'completed' ? 'bg-green-300' : 'bg-orange-300'}`}>
+                                 <h2 className={`text-sm font-normal ${item?.status === 'completed' ? 'text-black' : 'text-black'}`}>{item?.status}</h2>
+                                 </div>
+
                                 </td>
                                 <td className="px-4 lg:px-20 py-4 text-sm text-gray-500 dark:text-gray-300 "><p className='lg:ml-32 font-bold'>{item?.obtained}</p></td>
                                 <td className="px-4 lg:px-20 py-4 text-sm text-gray-500 dark:text-gray-300 "><p className='lg:ml-32 font-bold'>{item?.marks}</p></td>

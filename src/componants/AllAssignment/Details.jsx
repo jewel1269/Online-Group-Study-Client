@@ -16,7 +16,7 @@ const Details = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/assignments")
+      .get("https://online-group-study-server-red.vercel.app/assignments")
       .then((response) => {
         setDetails(response.data);
         setLoading(false);
@@ -64,21 +64,21 @@ const Details = () => {
       descriptions,
       feedback
     };
-    const url = 'http://localhost:5000/submittedAssignment' ;
+    const url = 'https://online-group-study-server-red.vercel.app/submittedAssignment' ;
     axios.post(url, assignmentSubmit)
     .then((response) => {
         if (response.data) {
-            console.log(response);
+            // console.log(response);
             toast.success("Successfully Submitted")
             Swal.fire("Submitted!", "", "success");
             form.reset()
         } else {
-            console.log(response);
+            // console.log(response);
             Swal.fire("Error", "Assignment Not Submit", "error");
         }
     })
     .catch((error) => {
-        console.log(error);
+        // console.log(error);
         Swal.fire("Error", "Failed to save changes", "error");
     });
   };

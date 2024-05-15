@@ -28,7 +28,7 @@ const AssignmentCard = ({item}) => {
         confirmButtonText: "Yes, delete it!"
       }).then((result) => {
         if (result.isConfirmed) {
-          const url = `http://localhost:5000/assignments/${user?.email}`;
+          const url = `https://online-group-study-server-red.vercel.app/assignments/${user?.email}`;
           axios.delete(url, { withCredentials: true })
             .then(() => {
               Swal.fire({

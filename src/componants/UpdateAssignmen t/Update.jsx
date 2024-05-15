@@ -18,12 +18,12 @@ const Update = () => {
 
 
   useEffect(() => {
-    axios.get("http://localhost:5000/assignments")
+    axios.get("https://online-group-study-server-red.vercel.app/assignments")
       .then((response) => {
         setItems(response.data);
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
       });
   }, []); 
 
@@ -50,7 +50,7 @@ const Update = () => {
     };
 
     try {
-      const url = `http://localhost:5000/assignments/${id}`;
+      const url = `https://online-group-study-server-red.vercel.app/assignments/${id}`;
       const response = await axios.put(url, assignment);
       if (response.data) {
         Swal.fire("Date Updated!", "", "success");
@@ -62,7 +62,7 @@ const Update = () => {
         Swal.fire("Error", "Assignment Not Added", "error");
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       Swal.fire("Error", "Failed to save changes", "error");
     }
   };
@@ -144,7 +144,7 @@ const Update = () => {
                 
 
                 <div>
-                  <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">
+                  <label className="block mb-2 text-sm text-gray-600  dark:text-gray-50">
                     <strong>Title:</strong>
                   </label>
                   <input
@@ -153,7 +153,7 @@ const Update = () => {
                     name="title"
                     defaultValue={data?.title}
                     placeholder="Title"
-                    className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                    className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400  border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                   />
                 </div>
 
@@ -167,7 +167,7 @@ const Update = () => {
                     name="photoURL"
                     defaultValue={data?.photoURL}
                     placeholder="thumbnail Image URL"
-                    className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                    className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400  border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                   />
                 </div>
 
@@ -181,7 +181,7 @@ const Update = () => {
                     id="marks"
                     defaultValue={data?.marks}
                     name="marks"
-                    className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                    className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400  border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                   />
                 </div>
 
@@ -213,7 +213,7 @@ const Update = () => {
                     id="date"
                     defaultValue={data?.date}
                     placeholder="Enter your password"
-                    className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                    className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400  border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                   />
                 </div>
 
@@ -227,7 +227,7 @@ const Update = () => {
                     placeholder="Descriptions........."
                     id="descriptions"
                     name="descriptions"
-                    className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                    className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400  border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                   />
                 </div>
                 <div>
@@ -237,7 +237,7 @@ const Update = () => {
                   <input
                     type="text"
                     defaultValue={data?.name}
-                    className="block disabled w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                    className="block disabled w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                   />
                 </div>
 

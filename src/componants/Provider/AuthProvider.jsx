@@ -37,7 +37,7 @@ const githubLogin=(githubProvider)=>{
 
 useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, currentUser => {
-        console.log("user in the", currentUser);
+        // console.log("user in the", currentUser);
         setUser(currentUser)
         setLoading(false)
         

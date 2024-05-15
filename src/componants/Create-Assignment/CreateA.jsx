@@ -29,9 +29,9 @@ const CreateA = () => {
       date,
       descriptions,
     };
-    console.log(assignment);
+    // console.log(assignment);
 
-    const url = 'http://localhost:5000/assignments' ;
+    const url = 'https://online-group-study-server-red.vercel.app/assignments' ;
     axios.post(url, assignment)
     .then((response) => {
         if (response.data) {
@@ -40,12 +40,12 @@ const CreateA = () => {
             toast.success("Successfully Created")
             from.reset()
         } else {
-            console.log(response);
+            // console.log(response);
             Swal.fire("Error", "Assignment Not Added", "error");
         }
     })
     .catch((error) => {
-        console.log(error);
+        // console.log(error);
         Swal.fire("Error", "Failed to save changes", "error");
     });
 

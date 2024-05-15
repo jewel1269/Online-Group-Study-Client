@@ -23,18 +23,18 @@ const Login = () => {
         signIn(email, password)
             .then((result) => {
                 const loggedInUser =result.user;
-                console.log(loggedInUser);
+                // console.log(loggedInUser);
                 toast.success("Successfully Login");
                 const user = {email};
-                axios.post("http://localhost:5000/jwt", user, {withCredentials: true})
+                axios.post("https://online-group-study-server-red.vercel.app/jwt", user, {withCredentials: true})
                 .then(res=> {
-                    console.log(res.data);
+                    // console.log(res.data);
                 })
                 navigate(location.state || '/');
                 form.reset();
             })
             .catch((error) => {
-                console.log(error.message);
+                // console.log(error.message);
                 setLoginError("Email or password is incorrect");
             });
     };
@@ -44,15 +44,15 @@ const Login = () => {
 
         googleLogin(googleProvider)
             .then((result) => {
-                console.log(result);
-                const {data} = axios.post("http://localhost:5000/jwt", {email: result?.user?.email}, {withCredentials: true})
-                console.log(data);
+                // console.log(result);
+                const {data} = axios.post("https://online-group-study-server-red.vercel.app/jwt", {email: result?.user?.email}, {withCredentials: true})
+                // console.log(data);
         
                 toast.success("Successfully Login");
                 navigate(location.state || '/');
             })
             .catch((error) => {
-                console.log(error);
+                // console.log(error);
             });
     };
 
@@ -60,14 +60,14 @@ const Login = () => {
         e.preventDefault();
         githubLogin(githubProvider)
             .then((result) => {
-                console.log(result);
-                const {data} = axios.post("http://localhost:5000/jwt", {email: result?.user?.email}, {withCredentials: true})
-                console.log(data);
+                // console.log(result);
+                const {data} = axios.post("https://online-group-study-server-red.vercel.app/jwt", {email: result?.user?.email}, {withCredentials: true})
+                // console.log(data);
                 toast.success("Successfully Login");
                 navigate(location.state || '/');
             })
             .catch((error) => {
-                console.log(error);
+                // console.log(error);
             });
     };
 

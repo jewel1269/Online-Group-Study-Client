@@ -11,7 +11,7 @@ const MyAssignment = () => {
     const [loading, setLoading] = useState(true);
     const { user } = useContext(AuthContext);
 
-    const url = `http://localhost:5000/submittedAssignment/${user?.email}`
+    const url = `https://online-group-study-server-red.vercel.app/submittedAssignment/${user?.email}`
   
    useEffect(()=>{
     axios.get(url, {withCredentials: true})
@@ -21,10 +21,10 @@ const MyAssignment = () => {
      
     })
     .then((error) => {
-      console.log(error);
+    //   console.log(error);
       setLoading(false);
     });
-  console.log(items);
+//   console.log(items);
    },[url])
 
     if (loading) {
@@ -50,7 +50,7 @@ const MyAssignment = () => {
             <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
                 <div className="overflow-hidden border border-gray-200 dark:border-gray-700 md:rounded-lg">
                     <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                        <thead className="bg-gray-50 dark:bg-gray-800">
+                        <thead className=" dark:bg-gray-800">
                             <tr>
                                 <th scope="col" className="py-3.5 px-4 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
                                     <div className="flex items-center gap-x-3">
@@ -99,7 +99,7 @@ const MyAssignment = () => {
     </div>
 </section>
 
-<div>
+<div className="overflow-scroll">
     {
        items && items.map(item=><Card key={item._id} item={item}></Card>)
     }
