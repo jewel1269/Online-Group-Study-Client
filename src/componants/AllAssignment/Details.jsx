@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet";
+import { toast } from "react-toastify";
 
 const Details = () => {
   const [details, setDetails] = useState([]);
@@ -68,6 +69,7 @@ const Details = () => {
     .then((response) => {
         if (response.data) {
             console.log(response);
+            toast.success("Successfully Submitted")
             Swal.fire("Submitted!", "", "success");
             form.reset()
         } else {
@@ -151,21 +153,23 @@ const Details = () => {
 
                           <form onSubmit={handleSubmitBtn} className="mt-4">
                           <label className="block mt-3" htmlFor="Pdf/Link">
+                            <span>Assignment Link:</span>
                               <input
                                 type="text"
                                 name="pdf"
                                 id="pdf"
-                                placeholder="Link/Pdf........"
+                                placeholder="Embedded Public Link...."
                                 className="block w-full px-4 py-3 text-sm text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300"
                               required
                               />
                             </label>
                             <label className="block mt-3" htmlFor="feedback">
+                              <span>Give Note: </span>
                               <textarea
                                 type="text"
                                 name="feedback"
                                 id="feedback"
-                                placeholder="feedback........"
+                                placeholder="Notes.........."
                                 className="block w-full px-4 py-3 text-sm text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300"
                               required
                               />

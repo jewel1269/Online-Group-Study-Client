@@ -12,13 +12,14 @@ import PrivateRoute from "../Private/PrivateRoute.jsx/PrivateRoute";
 import Update from "../UpdateAssignmen t/Update";
 import Exmeener from "../PendingAssignment/Exmeener";
 import PendingCard from "../PendingAssignment/PendingCard";
+import Error from "../ErrorPgae/Error";
 
 
 export const router = createBrowserRouter([
     {
       path: "/",
       element: <Root />,
-    //   errorElement: <ErrorPage />,
+      errorElement: <Error />,
       children: [
         {
           path: "/",

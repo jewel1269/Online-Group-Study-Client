@@ -6,13 +6,14 @@ import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import cover from "../../assets/create-removebg-preview.png";
 import { Helmet } from "react-helmet";
+import { toast } from "react-toastify";
 
 const Update = () => {
   const { id } = useParams();
   const [items, setItems] = useState([]);
   const { loading } = useContext(AuthContext);
   const location = useLocation()
-  const navi = useNavigate()
+  const navigate = useNavigate()
 
 
 
@@ -53,8 +54,9 @@ const Update = () => {
       const response = await axios.put(url, assignment);
       if (response.data) {
         Swal.fire("Date Updated!", "", "success");
+        toast.success("Successfully Updated")
         form.reset();
-        navi(location.state)
+       
         
       } else {
         Swal.fire("Error", "Assignment Not Added", "error");
@@ -240,7 +242,7 @@ const Update = () => {
                 </div>
 
                 <button className="flex items-center justify-between w-full px-6 py-3 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
-                  <span> Submit </span>
+                  <span> Update </span>
 
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

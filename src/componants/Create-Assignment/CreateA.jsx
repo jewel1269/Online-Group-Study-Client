@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { Helmet } from "react-helmet";
+import { toast } from 'react-toastify';
 const CreateA = () => {
     const {user} = useContext(AuthContext)
   const handleSubmit = (e) => {
@@ -36,6 +37,7 @@ const CreateA = () => {
         if (response.data) {
             console.log(response);
             Swal.fire("Saved!", "", "success");
+            toast.success("Successfully Created")
             from.reset()
         } else {
             console.log(response);

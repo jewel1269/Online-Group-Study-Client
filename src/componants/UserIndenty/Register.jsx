@@ -65,10 +65,9 @@ const Register = () => {
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Register Now </h1>
             <p className="py-6">
-              Discover the future of sustainable tourism management. Join us to
-              explore innovative strategies for <br />
-              community engagement and environmental stewardship. Register now
-              for impactful insights."
+            Online group study fosters collaboration and enhances learning. By connecting with peers virtually, <br />
+             students can share resources, discuss topics, and support each other, <br />
+              making study sessions more engaging and productive.
             </p>
           </div>
           <div className="card shrink-0 w-full  max-w-sm shadow-2xl ">

@@ -49,15 +49,15 @@ const Navbar = () => {
             <div  className="flex lg:ml-3 flex-col text-gray-600 capitalize dark:text-gray-300 lg:flex  lg:px-16 gap-2 lg:-mx-8 lg:flex-row lg:items-center">
                
                {
-                user?  <><Link to={"/"}  className="mt-2 transition-colors duration-300  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Home</strong></Link>
-                <Link to={"/AllAssignment"} className="mt-2 transition-colors duration-300  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Assignments</strong></Link>
-                <Link to={"/createA"} className="mt-2 transition-colors duration-300  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Create..Assignment</strong></Link>
-                <Link to={"/PendingAssignment"} className="mt-2 transition-colors duration-300  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"> <strong>Pending..Assignments</strong></Link>
-                <Link to={"/register"}  className="mt-2 transition-colors duration-300  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Register</strong></Link></>
+                user?  <><Link to={"/"}  className="mt-2 transition-colors duration-300 underline lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Home</strong></Link>
+                <Link to={"/AllAssignment"} className="mt-2 transition-colors duration-300 underline  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Assignments</strong></Link>
+                <Link to={"/createA"} className="mt-2 transition-colors duration-300 underline  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Create..Assignment</strong></Link>
+                <Link to={"/PendingAssignment"} className="mt-2 transition-colors duration-300 underline  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"> <strong>Pending..Assignments</strong></Link>
+                <Link to={"/register"}  className="mt-2 transition-colors duration-300 underline  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Register</strong></Link></>
                 :
-                <><Link to={"/"}  className="mt-2 transition-colors duration-300  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Home</strong></Link>
-                <Link to={"/AllAssignment"} className="mt-2 transition-colors duration-300  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Assignments</strong></Link>
-                <Link to={"/register"}  className="mt-2 transition-colors duration-300  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Register</strong></Link></>
+                <><Link to={"/"}  className="mt-2 transition-colors duration-300 underline  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Home</strong></Link>
+                <Link to={"/AllAssignment"} className="mt-2 transition-colors duration-300 underline  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Assignments</strong></Link>
+                <Link to={"/register"}  className="mt-2 transition-colors duration-300 underline  lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"><strong>Register</strong></Link></>
                 
                }
               
@@ -71,7 +71,7 @@ const Navbar = () => {
                   </svg>
                 </span>
 
-                <input type="text" className="w-full rounded-2xl py-1 pl-10 pr-4 text-gray-700 placeholder-gray-600 bg-white border-b border-gray-600 dark:placeholder-gray-300 dark:focus:border-gray-300 lg:w-56 lg:border-transparent dark:bg-gray-800 dark:text-gray-300 focus:outline-none focus:border-gray-600" placeholder="Search" />
+                <input type="text" className="w-full rounded-2xl py-1 pl-10 pr-4 text-gray-700 placeholder-gray-600  border-b border border-gray-600 dark:placeholder-gray-300 dark:focus:border-gray-300 lg:w-56 lg:border-transparent dark:bg-gray-800 dark:text-gray-300 focus:outline-none focus:border-gray-600" placeholder="Search" />
               </div>
             </div>
             
