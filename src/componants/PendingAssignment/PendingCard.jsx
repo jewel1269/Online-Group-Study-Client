@@ -78,7 +78,7 @@ const PendingCard = ({ item }) => {
                     <Dialog.Title className="text-base/7 font-medium text-white">
                      This is preview: 
                     </Dialog.Title>
-                   <iframe className="lg:h-[700px] lg:w-[650px]"src={pdf}>{pdf}</iframe>
+                   <iframe className="lg:h-[700px] h-[400px] w-auto lg:w-[650px]"src={pdf}>{pdf}</iframe>
                     <div className="mt-4">
                       <Button
                         onClick={close}
