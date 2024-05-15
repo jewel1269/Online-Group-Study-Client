@@ -159,8 +159,9 @@ const Details = () => {
                                 name="pdf"
                                 id="pdf"
                                 placeholder="Embedded Public Link...."
+                                required
                                 className="block w-full px-4 py-3 text-sm text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300"
-                              required
+                              
                               />
                             </label>
                             <label className="block mt-3" htmlFor="feedback">
@@ -170,8 +171,10 @@ const Details = () => {
                                 name="feedback"
                                 id="feedback"
                                 placeholder="Notes.........."
+                                required
+                              
                                 className="block w-full px-4 py-3 text-sm text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300"
-                              required
+                              
                               />
                             </label>
 
