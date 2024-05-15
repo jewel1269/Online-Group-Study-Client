@@ -66,7 +66,7 @@ const AllAssignment = () => {
                 <option value="Hard">Hard</option>
               </select>
               <div className="absolute inset-y-0 mt-2 right-0 flex items-center px-2 pointer-events-none">
-                <IoIosArrowDown className="mt-4 text-gray-600" />
+                <IoIosArrowDown className="mt-12 lg:mr-12 text-gray-600" />
               </div>
             </div>
           </div>
